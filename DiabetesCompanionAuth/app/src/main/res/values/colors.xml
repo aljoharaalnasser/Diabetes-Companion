@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#F7F9F3</color>
+    <color name="surface">#FEFFFC</color>
+    <color name="teal">#238D80</color>
+    <color name="teal_dark">#226C63</color>
+    <color name="ink">#233D37</color>
+    <color name="muted">#63756D</color>
+    <color name="outline">#8D9C93</color>
+    <color name="error">#AD3434</color>
+</resources>

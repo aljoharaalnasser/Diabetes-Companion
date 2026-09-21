@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppThemeBase" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/teal</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+    </style>
+    <style name="AppTheme" parent="AppThemeBase" />
+    <style name="InputRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    <style name="InputIcon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginEnd">14dp</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="FormInput">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textColorHint">@color/muted</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:saveEnabled">false</item>
+        <item name="android:importantForAutofill">no</item>
+    </style>
+    <style name="EyeButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:padding">13dp</item>
+        <item name="android:src">@drawable/ic_eye</item>
+    </style>
+    <style name="RoleButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:background">@drawable/bg_role</item>
+        <item name="android:button">@null</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="FieldError">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/error</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:accessibilityLiveRegion">polite</item>
+    </style>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diabetes Companion</string>
+    <string name="signup_title">Create your account</string>
+    <string name="signup_subtitle">Choose your role and a few details to get started.</string>
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Choose your role and sign in to Diabetes Companion.</string>
+    <string name="role_label">I am a</string>
+    <string name="patient">Patient</string>
+    <string name="doctor">Doctor</string>
+    <string name="caregiver">Caregiver</string>
+    <string name="admin">Admin</string>
+    <string name="full_name">Full name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="create_account">Create account</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="already_account">Already have an account?</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="terms">By continuing you agree to the terms and privacy notice. Your health data is only shared with people you approve.</string>
+    <string name="login_note">Your care, connected. Access your account to stay close to your care team.</string>
+    <string name="back">Back to sign in</string>
+    <string name="back_signup">Back to sign up</string>
+    <string name="show_password">Show password</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_confirmation">Show confirm password</string>
+    <string name="hide_confirmation">Hide confirm password</string>
+</resources>

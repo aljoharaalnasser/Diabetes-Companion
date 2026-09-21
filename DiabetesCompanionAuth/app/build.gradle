@@ -1,0 +1,24 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.diabetescompanion.auth'
+    compileSdk 35
+    buildToolsVersion '36.0.0'
+    defaultConfig {
+        applicationId 'com.diabetescompanion.authdemo'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0-demo'
+        testInstrumentationRunner 'com.diabetescompanion.auth.AuthSmokeTest'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildTypes {
+        release { minifyEnabled false }
+    }
+}
+
+// Native Android views only. No Firebase, network, database, or authentication SDK.

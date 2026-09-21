@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg_page" tools:context=".AuthActivity" tools:ignore="Autofill,UselessParent">
+    <!-- Autofill is deliberately disabled for this non-authenticating demo.
+         The root owns system/keyboard insets independently of the scroll content. -->
+    <ScrollView android:id="@+id/scroll" android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fillViewport="true" android:clipToPadding="false" android:scrollbars="none">
+        <LinearLayout android:id="@+id/content" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingStart="20dp" android:paddingEnd="20dp" android:paddingBottom="20dp"
+            android:focusableInTouchMode="true">
+            <ImageButton android:id="@+id/back" android:layout_width="48dp" android:layout_height="48dp"
+                android:layout_marginStart="-8dp" android:layout_marginTop="4dp" android:padding="12dp"
+                android:src="@drawable/ic_back" android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back" />
+            <ImageView android:layout_width="60dp" android:layout_height="60dp" android:layout_marginTop="8dp"
+                android:src="@drawable/ic_app" android:importantForAccessibility="no" />
+            <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" android:text="@string/signup_title" android:textColor="@color/ink"
+                android:textSize="28sp" android:fontFamily="sans-serif-medium" android:accessibilityHeading="true" tools:targetApi="28" />
+            <TextView android:id="@+id/subtitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="7dp" android:text="@string/signup_subtitle" android:textColor="@color/muted"
+                android:textSize="15sp" android:lineSpacingExtra="3dp" />
+            <LinearLayout android:id="@+id/card" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="26dp" android:orientation="vertical" android:padding="20dp"
+                android:background="@drawable/bg_card" android:elevation="1dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/role_label" android:textSize="14sp" android:textColor="@color/muted"
+                    android:labelFor="@id/roles" />
+                <RadioGroup android:id="@+id/roles" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:orientation="horizontal" android:padding="2dp"
+                    android:background="@drawable/bg_roles" android:checkedButton="@id/role_patient">
+                    <RadioButton android:id="@+id/role_patient" style="@style/RoleButton" android:text="@string/patient" />
+                    <RadioButton android:id="@+id/role_doctor" style="@style/RoleButton" android:text="@string/doctor" />
+                    <RadioButton android:id="@+id/role_caregiver" style="@style/RoleButton" android:text="@string/caregiver" />
+                    <RadioButton android:id="@+id/role_admin" style="@style/RoleButton" android:text="@string/admin" />
+                </RadioGroup>
+                <LinearLayout android:id="@+id/name_row" style="@style/InputRow" android:layout_marginTop="26dp">
+                    <ImageView style="@style/InputIcon" android:src="@drawable/ic_person" android:contentDescription="@null" />
+                    <EditText android:id="@+id/name_input" style="@style/FormInput" android:hint="@string/full_name"
+                        android:inputType="textPersonName|textCapWords" android:imeOptions="actionNext" android:maxLength="100" />
+                </LinearLayout>
+                <TextView android:id="@+id/name_error" style="@style/FieldError" />
+                <LinearLayout android:id="@+id/email_row" style="@style/InputRow">
+                    <ImageView style="@style/InputIcon" android:src="@drawable/ic_mail" android:contentDescription="@null" />
+                    <EditText android:id="@+id/email_input" style="@style/FormInput" android:hint="@string/email"
+                        android:inputType="textEmailAddress" android:imeOptions="actionNext" android:maxLength="254" />
+                </LinearLayout>
+                <TextView android:id="@+id/email_error" style="@style/FieldError" />
+                <LinearLayout android:id="@+id/password_row" style="@style/InputRow">
+                    <ImageView style="@style/InputIcon" android:src="@drawable/ic_lock" android:contentDescription="@null" />
+                    <EditText android:id="@+id/password_input" style="@style/FormInput" android:hint="@string/password"
+                        android:inputType="textPassword" android:imeOptions="actionNext" />
+                    <ImageButton android:id="@+id/password_toggle" style="@style/EyeButton" android:contentDescription="@string/show_password" />
+                </LinearLayout>
+                <TextView android:id="@+id/password_error" style="@style/FieldError" />
+                <LinearLayout android:id="@+id/confirm_row" style="@style/InputRow">
+                    <ImageView style="@style/InputIcon" android:src="@drawable/ic_confirm" android:contentDescription="@null" />
+                    <EditText android:id="@+id/confirm_input" style="@style/FormInput" android:hint="@string/confirm_password"
+                        android:inputType="textPassword" android:imeOptions="actionDone" />
+                    <ImageButton android:id="@+id/confirm_toggle" style="@style/EyeButton" android:contentDescription="@string/show_confirmation" />
+                </LinearLayout>
+                <TextView android:id="@+id/confirm_error" style="@style/FieldError" />
+                <TextView android:id="@+id/forgot" android:layout_width="wrap_content" android:layout_height="48dp"
+                    android:layout_gravity="end" android:gravity="center" android:text="@string/forgot_password"
+                    android:textColor="@color/teal_dark" android:textSize="14sp" android:fontFamily="sans-serif-medium"
+                    android:background="?android:attr/selectableItemBackground" android:clickable="true" android:focusable="true"
+                    android:visibility="gone" />
+                <Button android:id="@+id/submit" android:layout_width="match_parent" android:layout_height="54dp"
+                    android:layout_marginTop="18dp" android:background="@drawable/bg_primary" android:stateListAnimator="@null"
+                    android:backgroundTint="@null" android:text="@string/create_account" android:textColor="#FFFFFF"
+                    android:textSize="15sp" android:fontFamily="sans-serif-medium" android:textAllCaps="false" />
+                <TextView android:id="@+id/notice" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="48dp" android:layout_marginTop="12dp" android:padding="4dp"
+                    android:text="@string/terms" android:textColor="@color/muted" android:textSize="12sp"
+                    android:lineSpacingExtra="2dp" android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true" android:focusable="true" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp"
+                    android:orientation="horizontal" android:gravity="center">
+                    <TextView android:id="@+id/switch_prompt" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/already_account" android:textColor="@color/muted" android:textSize="13sp" />
+                    <TextView android:id="@+id/switch_mode" android:layout_width="wrap_content" android:layout_height="48dp"
+                        android:paddingStart="12dp" android:paddingEnd="4dp" android:gravity="center"
+                        android:text="@string/sign_in" android:textColor="@color/teal_dark" android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true" android:focusable="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
