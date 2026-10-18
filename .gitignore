@@ -1,0 +1,33 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Private configuration and credentials
+.env
+.env.*
+*.jks
+*.keystore
+*.pem
+*.p12
+service-account*.json
+*adminsdk*.json
+
+# Firebase configuration (review before publishing)
+.firebaserc
+firebase.json
+app/google-services.json
+
+# Kotlin generated files
+.kotlin/
